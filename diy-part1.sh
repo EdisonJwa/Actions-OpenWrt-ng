@@ -19,3 +19,6 @@ git clone https://github.com/rosywrt/luci-theme-rosy.git package/luci-theme-rosy
 
 rm -rf package/lean/luci-theme-argon  
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
+
+sed '/openwrt.proxy.ustclug.org/d' package/lean/default-settings/files/zzz-default-settings
+sed '/https:/d' package/lean/default-settings/files/zzz-default-settings
